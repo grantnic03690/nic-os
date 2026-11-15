@@ -1,0 +1,45 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 34,
+    "margin-top": 8,
+    "margin-left": 14,
+    "margin-right": 14,
+    "modules-left": ["custom/menu", "network", "pulseaudio"],
+    "modules-center": ["custom/nicos"],
+    "modules-right": ["clock", "battery"],
+
+    "custom/menu": {
+        "format": "",
+        "on-click": "wofi --show drun",
+        "tooltip": false
+    },
+    "network": {
+        "format-wifi": "",
+        "format-ethernet": "",
+        "format-disconnected": "⚠",
+        "on-click": "swaync-client -t -sw",
+        "tooltip-format": "{essid}"
+    },
+    "pulseaudio": {
+        "format": "{icon}",
+        "format-muted": "",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+        "on-click": "swaync-client -t -sw"
+    },
+    "custom/nicos": {
+        "format": "● ● ●  Nic OS",
+        "on-click": "swaync-client -t -sw",
+        "tooltip": false
+    },
+    "clock": {
+        "format": "{:%H:%M  %a, %b %d}",
+        "tooltip": false
+    },
+    "battery": {
+        "format": "{capacity}% {icon}",
+        "format-icons": ["", "", "", "", ""]
+    }
+}
