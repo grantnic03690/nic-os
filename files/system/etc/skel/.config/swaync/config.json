@@ -1,0 +1,50 @@
+{
+  "$schema": "/etc/xdg/swaync/configSchema.json",
+  "positionX": "center",
+  "positionY": "top",
+  "layer": "overlay",
+  "control-center-margin-top": 52,
+  "control-center-width": 440,
+  "control-center-height": 360,
+  "widgets": [
+    "buttons-grid",
+    "volume",
+    "backlight",
+    "title",
+    "notifications"
+  ],
+  "widget-config": {
+    "title": {
+      "text": "Nic OS Center",
+      "clear-all-button": true,
+      "button-text": "Clear"
+    },
+    "volume": {
+      "label": ""
+    },
+    "backlight": {
+      "label": "",
+      "device": "intel_backlight"
+    },
+    "buttons-grid": {
+      "actions": [
+        {
+          "label": "  Wi-Fi",
+          "command": "nm-connection-editor"
+        },
+        {
+          "label": "  Bluetooth",
+          "command": "blueman-manager"
+        },
+        {
+          "label": "  Focus",
+          "command": "swaync-client -d"
+        },
+        {
+          "label": "  Settings",
+          "command": "foot"
+        }
+      ]
+    }
+  }
+}
