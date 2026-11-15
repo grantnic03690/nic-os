@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<labwc_config>
+  <core>
+    <gap>10</gap>
+  </core>
+
+  <theme>
+    <cornerRadius>16</cornerRadius>
+    <dropShadows>yes</dropShadows>
+    <font name="Noto Sans" size="11"/>
+  </theme>
+
+  <keyboard>
+    <default/>
+    <keybind key="W-Return">
+      <action name="Execute" command="foot"/>
+    </keybind>
+    <keybind key="W-d">
+      <action name="Execute" command="wofi --show drun"/>
+    </keybind>
+    <keybind key="W-e">
+      <action name="Execute" command="thunar"/>
+    </keybind>
+    <keybind key="W-q">
+      <action name="Close"/>
+    </keybind>
+    <keybind key="A-Tab">
+      <action name="NextWindow"/>
+    </keybind>
+  </keyboard>
+
+  <mouse>
+    <default/>
+  </mouse>
+</labwc_config>
