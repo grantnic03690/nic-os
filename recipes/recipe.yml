@@ -36,4 +36,4 @@ modules:
       repo-name: flathub
       repo-title: "Flathub (system-wide)"
 
-  - type: signing
+  
