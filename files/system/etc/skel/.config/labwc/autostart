@@ -1,0 +1,4 @@
+swaybg -c "#e2e8f0" >/dev/null 2>&1 &
+waybar >/dev/null 2>&1 &
+swaync >/dev/null 2>&1 &
+nm-applet --indicator >/dev/null 2>&1 &
