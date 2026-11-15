@@ -1,39 +1,36 @@
 name: nic-os
-description: Ultra-lightweight bulletproof custom Fedora Atomic OS
+description: A lightweight, minimal, glassy Atomic OS based on Fedora.
 base-image: ghcr.io/ublue-os/base-main
 image-version: latest
 
 modules:
+  - type: files
+    files:
+      - source: system
+        destination: /
+
   - type: rpm-ostree
     install:
       - labwc
       - waybar
-      - swaybg
       - swaync
+      - swaybg
       - wofi
       - foot
       - thunar
       - greetd
       - tuigreet
-      - wl-clipboard
-      - grim
-      - slurp
-      - brightnessctl
-      - network-manager-applet
-      - pavucontrol
       - fontawesome-fonts-all
       - google-noto-sans-fonts
+      - network-manager-applet
+      - blueman
 
   - type: systemd
     system:
       enabled:
         - greetd.service
 
-  - type: default-flatpaks
-    notify: true
-    system:
-      repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
-      repo-name: flathub
-      repo-title: "Flathub (system-wide)"
-
-  
+  - type: script
+    snippets:
+      - sed -i 's/^PRETTY_NAME=.*/PRETTY_NAME="Nic OS"/' /usr/lib/os-release
+      - sed -i 's/^NAME=.*/NAME="Nic OS"/' /usr/lib/os-release
