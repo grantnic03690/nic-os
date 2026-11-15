@@ -1,0 +1,46 @@
+* {
+    font-family: "Noto Sans", "Font Awesome 6 Free", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+window#waybar {
+    background-color: transparent;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+    background-color: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(255, 255, 255, 0.85);
+    border-radius: 99px;
+    padding: 2px 14px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+#custom-menu,
+#network,
+#pulseaudio,
+#custom-nicos,
+#clock,
+#battery {
+    padding: 0 8px;
+}
+
+#custom-nicos {
+    letter-spacing: 0.4px;
+    color: #334155;
+}
+
+#battery.charging {
+    color: #10b981;
+}
+
+#battery.warning:not(.charging) {
+    color: #f59e0b;
+}
+
+#battery.critical:not(.charging) {
+    color: #ef4444;
+}
